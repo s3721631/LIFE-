@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="styles/register.css" />
+  <script type="text/javascript" src="scripts/register.js" defer></script>
+
+  <title>Register Page</title>
+</head>
+
+<body>
+  <!-- Nav bar-->
+  <nav class="navbar">
+    <h1 class="logo">Life</h1>
+    <ul class="navigation-links">
+
+      <li><a href="index.html">Home</a></li>
+
+      <div class="dropdown">
+        <div class="dropbtn">Services</div>
+        <div class="dropdown-content">
+          <a href="yoga.html">Yoga</a>
+          <a href="meditation.html">Meditation</a>
+          <a href="stretch.html">Stretching</a>
+          <a href="healthyhabits.html">Healthy Habits</a>
+
+        </div>
+
+      </div>
+
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li class="btn"><a href="register.html">Register</a></li>
+
+    </ul>
+  </nav>
+  <header>
+    <div class="header-content">
+      <h2>Registration Form</h2>
+      <div class="line"></div>
+      <h3>Register and join the LIFE community today.</h3>
+  </header>
+
+  <section>
+    <div id="register-container">
+
+      <div id="register-content">
+        <!-- registration form -->
+        <form id="registration_form" onsubmit="return checkForm()">
+          <div><span class="label">First Name:</span><input name="FirstName" type="text" value="" id="firstname" /></div>
+          <!-- the error element is hidden by default -->
+          <div class="error" id="firstnameError">Required: Please enter your first name</div>
+
+          <div><span class="label">Last Name:</span><input name="SurName" type="text" value="" name='Surname' id="surname" /></div>
+          <div class="error" id="surnameError">Required: Please enter your last name</div>
+
+          <!-- must be in proper email format, use REGEX to validate the expression -->
+          <div><span class="label">Email:</span><input name="Email" type="text" value="" id="email" /></div>
+          <div class="error" id="emailError"> Required: Please enter a valid email</div>
+
+          <!-- email user input from previous field cannot be copied, it must be typed again -->
+          <div><span class="label">Confirm Email:</span><input name="ConfirmEmail" type="text" value="" id="confirmemail" /></div>
+          <div class="error" id="confirmemailError"> Required: Please enter make sure email is the same as above.</div>
+
+          <!-- Must be in +61 4xx xxx xxx (Australian mobile number) format. Use REGEX to validate the expression.-->
+          <div><span class="label">Phone Number:</span><input name="Phone" type="text" value="" id="phone" /></div>
+          <div class="error" id="phoneError">Required: Please enter a valid phone number</div>
+
+          <!--Range slider and must be 16 years or older-->
+          <div class="status"><span class="label">Age:</span><input name="Age" type="range" value="0" id="age" max=100 /></div>
+          <div class="ageValue">0</div>
+          <div class="error" id="ageError">Required: Please enter your age - must be 16 or older.</div>
+
+          <div class="status"><span class="label">Student Status:</span>
+            <input type="radio" id="student_yes" name="StudentStatus" value="yes">
+              <label for="student_yes">Yes</label>
+            <input type="radio" id="student_no" name="StudentStatus" value="no">No</input>
+          </div>
+          <div class="error" id="studentError">Required: Please choose an option</div>
+                   
+          <!-- Radio Button Section-->
+
+          <div class="status"><span class="label">Employment Status:</span>
+            <input type="radio" id="emp_yes" name="Employee" value="yes">
+              <label for="emp_yes">Yes</label>
+            <input type="radio" id="emp_no" name="Employee Status" value="no">
+              <label for="emp_no" id="empNoLabel" data-errLabel="Employee Details">No</label>
+          </div>
+          <div class="error" id="employeeError">Required: Please choose an option</div>
+
+          <div><input id="registration_submit" type="submit" value="Submit" /></div>
+
+        </form>
+
+      </div><!-- close content -->
+
+    </div> <!-- close container -->
+  </section>
+
+                      <!-- Footer Section-->
+
+  <footer>
+    <div class="container">
+      <div class="footer">
+        <div class="resources">
+
+          <ul>
+
+            <li>Resources</li>
+            <li><a href="https://www.health.gov.au/resources/collections/novel-coronavirus-2019-ncov-resources#masks-information" target="_blank">Usage of Masks</a></li>
+            <li><a href="https://www.health.gov.au/resources/collections/novel-coronavirus-2019-ncov-resources#for-employers" target="_blank">Employees Information</a></li>
+            <li><a href="https://www.health.gov.au/resources/collections/novel-coronavirus-2019-ncov-resources#for-international-travellers" target="_blank">International Travellers Information</a></li>
+            <li><a href="https://www.health.gov.au/resources/collections/novel-coronavirus-2019-ncov-resources#for-travel-transport-and-hotel-industries" target="_blank">Travel, Transport and Hotel Industries</a></li>
+
+          </ul>
+        </div>
+        <div class="sitemap">
+          <ul>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+
+        <div class="rights">
+          <p>Copyright &copy; 2021 Ruchita Pandey s3721631</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="./checkForm.js"></script>
+</body>
+
+</html>
